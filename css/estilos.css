@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100..900;1,100..900&family=RocknRoll+One&display=swap');
+
+body {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+}
+
+header nav {
+    background-color: rgb(244, 203, 137);
+    width: 100%;
+}
+
+header img {
+    float: left;
+    height: 100px;
+    width: 150px;
+    object-fit: contain;
+    background-color: rgb(240, 182, 119);
+    padding: 5px;
+    border: 1px solid rgb(227, 108, 4, 0.5);
+    
+}
+
+header a {
+    float: left;
+    padding: 40px 30px;
+    font-family: 'REM', sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+    color: black;
+    text-decoration-line: none;
+    transition: background-color 0.5s;
+}
+
+header a.actual {
+    background-color: rgb(227, 108, 4, 0.3);
+}
+
+header a:hover {
+    background-color: rgb(227, 108, 4, 0.5);
+}
+
+main {
+    margin-top: 100px;
+    padding: 20px;
+    clear: left;
+}
