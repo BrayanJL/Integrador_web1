@@ -61,14 +61,10 @@ function actualizarFormulario() {
 }
 
 function actualizarSelect() {
-    let opcionesF = formulario.getElementsByTagName("option");
-    let opcionesNF = nuevoFormulario.getElementsByTagName("option");
+    let seleccion = document.getElementById("idHorarios");
+    let seleccionNF = nuevoFormulario.getElementsByTagName("select");
 
-    for (let index = 0; index < opcionesF.length; index++) {
-        if (opcionesF.item(index).selected) {
-            opcionesNF.item(index).selected = true;
-        }
-    }
+    seleccionNF.innerHTML = seleccionNF[0].value = seleccion.value;
 }
 
 function validacionCampo1() {
@@ -153,10 +149,12 @@ function validacionCampo4() {
     if (seleccion.value == "sinHorario") {
         span.innerHTML = errores.get("selectVacio");
         span.style.color = "red";
-        seleccion.insertAdjacentElement("afterend", span)
+        seleccion.insertAdjacentElement("afterend", span);
         return false;
     }
-    else {
-        span.remove();
-    }
+    
+}
+
+function sacarSpan() {
+    span.remove()
 }
