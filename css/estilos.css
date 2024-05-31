@@ -73,7 +73,7 @@ main {
 /* FOOTER */
 
 #contenido {
-    padding-bottom: 200px; /* tamanio del footer */
+    padding-bottom: 240px; /* tamanio del footer */
 }
 
 footer {
@@ -82,7 +82,7 @@ footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 200px;
+    height: 240px;
     box-sizing: border-box;
     font-weight: 200;
     flex-direction: column;
@@ -100,6 +100,7 @@ footer img {
     height: 100px;
     object-fit: contain;
     opacity: 50%;
+    margin: 20px;
 }
 
 footer address {
@@ -112,6 +113,7 @@ footer div {
     font-size: 20px;
     width: 100%;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 /* ARTICULO */
@@ -284,4 +286,89 @@ form select {
     border: 0px;
     color: white;
     background-color: rgb(235, 155, 70);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* PAG PRINCIPAL */
+
+#carrusel {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 120px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    background-color: white;
+    width: 600px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid rgb(244, 203, 137);
+}
+
+#carrusel button {
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(244, 203, 137, 0.5);
+    border: none;
+    color: black;
+    font-size: 15px;
+    transition: background-color 0.1s;
+}
+
+#carrusel button:hover {
+    background-color: rgb(245, 192, 107);
+}
+
+#CarBotonIzq {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translate(0, -50%);
+}
+
+#CarBotonDer {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translate(0, -50%);
+}
+
+#imagen_Carrusel {
+    width: 100%;
+}
+
+#marcas {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+#marcastitulo {
+    background-color: rgb(255, 241, 220);
+}
+
+#marcastitulo h1 {
+    margin: 0;
+    margin-bottom: 3px;
+    padding: 10px;
+    font-size: 40px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    border-inline: 2px solid rgb(255, 228, 185);
+    border-radius: 5px;
+    width: 100%;
+    height: 240px;
+    padding: 10px;
+    background-color: rgb(255, 241, 220) ;
+}
+
+.logos img {
+    object-fit: contain;
+    width: 150px;
 }
