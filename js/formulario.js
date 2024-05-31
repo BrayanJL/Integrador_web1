@@ -48,7 +48,8 @@ function validar() {
         document.getElementById("form").style.height="600px";
         parrafo.remove()
         nuevoFormulario.remove()
-        window.scrollTo(0,0)
+        
+        scrollFormulario()
     }
     
     return false;
@@ -174,12 +175,23 @@ function sacarSpan() {
     span.remove()
 }
 
-function scrollNuevoFormulario() {
-    var posicion = nuevoFormulario.getBoundingClientRect().top;
-    var offsetFormulario = posicion + window.scrollY - 400;
+function scrollFormulario() {
+    var posicion = formulario.getBoundingClientRect().top;
+    var offsetFormulario = posicion + window.scrollY - 200;
 
     window.scrollTo({
         top: offsetFormulario,
+        behavior: "smooth",
+    })
+}
+
+
+function scrollNuevoFormulario() {
+    var posicion = nuevoFormulario.getBoundingClientRect().top;
+    var offsetNuevoFormulario = posicion + window.scrollY - 200;
+
+    window.scrollTo({
+        top: offsetNuevoFormulario,
         behavior: "smooth",
     })
 }
