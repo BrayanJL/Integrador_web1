@@ -34,17 +34,20 @@ function validar() {
     }
 
     if (valido) {
-        //formulario.style.display = "none";
-
         formulario.insertAdjacentElement("afterend",nuevoFormulario)
         formulario.classList.add("formulario")
 
         parrafo.innerHTML = "Datos enviados";
         parrafo.id = 'Validacion';
-        formulario.insertAdjacentElement("afterend",parrafo)
+        nuevoFormulario.insertAdjacentElement("beforebegin",parrafo)
         document.getElementById("form").style.height="1100px";
 
         scrollNuevoFormulario();
+    }
+    else {
+        document.getElementById("form").style.height="600px";
+        parrafo.remove()
+        nuevoFormulario.remove()
     }
     
     return false;
@@ -173,9 +176,11 @@ function sacarSpan() {
 function scrollNuevoFormulario() {
     var posicion = nuevoFormulario.getBoundingClientRect().top;
     var offsetNuevoFormulario = posicion + window.scrollY;
+    var posicion = formulario.lastElementChild.previousElementSibling.getBoundingClientRect().top;
+    var offsetFormulario = posicion + window.scrollY;
 
     window.scrollTo({
-        top: offsetNuevoFormulario,
+        top: offsetFormulario,
         behavior: "smooth",
     })
 }
