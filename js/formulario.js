@@ -38,8 +38,10 @@ function validar() {
 
         nuevoFormulario.removeChild(nuevoFormulario.lastElementChild)
         formulario.insertAdjacentElement("afterend",nuevoFormulario)
+        formulario.classList.add("formulario")
 
         parrafo.innerHTML = "Datos enviados";
+        parrafo.id = 'Validacion';
         formulario.insertAdjacentElement("afterend",parrafo)
     }
     
@@ -148,7 +150,7 @@ function validacionCampo4() {
 
     if (seleccion.value == "sinHorario") {
         span.innerHTML = errores.get("selectVacio");
-        span.style.color = "red";
+        span.id = 'error';
         seleccion.insertAdjacentElement("afterend", span);
         return false;
     }

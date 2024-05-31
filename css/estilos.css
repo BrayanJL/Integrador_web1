@@ -2,19 +2,27 @@
 
 body {
     margin: 0;
+    background-color: rgb(255, 228, 185);
 }
+
+* {
+    font-family: 'REM', Arial, Helvetica, sans-serif;
+}
+
+/* HEADER */
 
 header {
     display: flex;
     position: fixed;
     top: 0;
     width: 100%;
-
+    z-index: 2;
 }
 
 header nav {
     background-color: rgb(244, 203, 137);
     width: 100%;
+
 }
 
 header img {
@@ -23,20 +31,22 @@ header img {
     width: 150px;
     object-fit: contain;
     background-color: rgb(240, 182, 119);
-    padding: 5px;
+    padding: 2px;
     border: 1px solid rgb(227, 108, 4, 0.5);
-    
+    box-sizing: border-box;
 }
 
 header a {
     float: left;
-    padding: 40px 30px;
-    font-family: 'REM', sans-serif;
+    padding: 30px 30px;
+    font-weight: 400;
     font-size: 25px;
     text-transform: uppercase;
-    color: black;
+    color: rgb(179, 91, 15);
     text-decoration-line: none;
-    transition: background-color 0.5s;
+    transition: background-color 0.5s, color 0.3s; 
+    box-sizing: border-box;
+    height: 100px;
 }
 
 header a.actual {
@@ -45,10 +55,211 @@ header a.actual {
 
 header a:hover {
     background-color: rgb(227, 108, 4, 0.5);
+    color: rgb(0, 0, 0, 0.7);
+}
+
+header a.actual {
+    color: white;
 }
 
 main {
-    margin-top: 100px;
-    padding: 20px;
+    position: relative;
+    min-height: 100vh;
+    margin-top: 100px; /* tamanio del header */
     clear: left;
+
+}
+
+/* FOOTER */
+
+#contenido {
+    padding-bottom: 200px; /* tamanio del footer */
+}
+
+footer {
+    background-color: rgb(117, 86, 57);
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    box-sizing: border-box;
+    font-weight: 200;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    color: rgb(255, 255, 255, 0.4);
+}
+
+footer a {
+    color: white;
+    opacity: 0.6;
+}
+
+footer img {
+    height: 100px;
+    object-fit: contain;
+    opacity: 50%;
+}
+
+footer address {
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+footer div {
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+/* ARTICULO */
+
+.etiqueta {
+    margin-bottom: 0px;
+    float: left;
+    font-weight: 300;
+    color: rgb(110, 57, 9);
+    border: 1px solid rgb(227, 108, 4, 0.5);
+    border-radius: 10%;
+    background-color: rgb(244, 203, 137);
+    padding-inline: 5px;
+    margin-inline-end: 5px;
+}
+
+
+#titulo {
+    clear: left;
+    font-weight: 600;
+    font-size: 30px;
+    margin-top: 0px;
+}
+
+#artcl {
+    padding: 30px;
+    display: flex;
+}
+
+
+
+div #producto img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.columna {
+    padding: 30px;
+}
+
+.izq {
+    width: 45%;
+    background-color: white;
+    border-radius: 3%;
+    border: 2px solid rgb(244, 203, 137);
+}
+
+.der {
+    padding-left: 50px;
+    background-color: rgb(255, 228, 185);
+    width: 55%;
+    margin-top: 50px;
+    color: rgb(110, 57, 9);
+}
+
+table {
+    border-top: 4px solid rgb(244, 203, 137);
+    border-bottom: 4px solid rgb(244, 203, 137);
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tr {
+    border-radius: 50%;
+}
+
+td {
+    padding: 5px;
+}
+
+.der h2 {
+    font-size: 30px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(244, 203, 137);
+}
+
+/* FORMULARIO */
+    
+#Validacion {
+    text-align: center;
+    padding: 10px;
+    width: 200px;
+    background-color: aquamarine;
+}
+
+#error {
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 400px;
+    height: 50px;
+    font-size: 30px;
+    background-color: rgb(255, 135, 135);
+    color: white;
+    font-weight: 400;
+    display: block;
+    border-radius: 10px;
+    padding-top: 5px;
+}
+
+
+
+#form {
+    box-sizing: border-box;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(244, 203, 137);
+    width: 600px;
+    height: 600px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 80px;
+}
+
+
+
+#form h1 {
+    font-size: 40px;
+}
+
+
+form {
+    font-weight: 200;
+    font-size: 30px;
+    width: 100%;
+    height: 100%;
+    background-color: aliceblue;
+}
+
+form input {
+    height: 40px;
+    width: 500px;
+    font-size: 20px;
+}
+
+#botonform input {
 }

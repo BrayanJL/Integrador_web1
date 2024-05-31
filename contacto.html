@@ -23,54 +23,72 @@
     </header>
     
     <main>
+        <div id="contenido">
 
-        <article>
-            <h1>PONERSE EN CONTACTO</h1>
+            <article id="formcont">
+                
 
-            <div>
-                <form id="formulario" onchange="actualizarFormulario()" onsubmit="return validar()">
-
-                    <label for="idApellido">Apellido*</label>
-                    <input id="idApellido" type="text" name="apellido" placeholder = "12 caracteres como máximo">
-
-                    <label for="idNombre">Nombre*</label>
-                    <input id="idNombre" type="text" name="nombre" placeholder= "15 caracteres como máximo">
-
-                    <label for="idTelefono">Teléfono*</label>
-                    <input id="idTelefono" type="tel" name="telefono" placeholder= "10 dígitos como máximo">
-            
-                    <label for="idHorarios">Horario de disponibilidad</label>
-            
-                    <select name="horarios" id="idHorarios" onchange="sacarSpan()">
-                        <option value="sinHorario">Ninguno</option>
-                        <option value="horario1">De 9 a 12</option>
-                        <option value="horario2">De 12 a 15</option>
-                        <option value="horario3">De 15 a 18</option>
-                        <option value="horario4">De 18 a 21</option>
-                    </select>
-                    
+                <div  id="form">
                     <div>
-                        <input type="submit" value="Enviar">
+                        <h1>PONERSE EN CONTACTO</h1>
                     </div>
+                    <form class="formulario" id="formulario" onchange="actualizarFormulario()" onsubmit="return validar()">
+                        <div>
+                            <label for="idApellido">Apellido*</label>
+                            <input id="idApellido" type="text" name="apellido" placeholder = "12 caracteres como máximo">
+                        </div>
 
-                </form>
+                        <div>
+                            <label for="idNombre">Nombre*</label>
+                            <input id="idNombre" type="text" name="nombre" placeholder= "15 caracteres como máximo">
+                        </div>
+                        <div>
+                            <label for="idTelefono">Teléfono*</label>
+                            <input id="idTelefono" type="tel" name="telefono" placeholder= "10 dígitos como máximo">
+                        </div>
+                        <div id="botonform">
+                            <label for="idHorarios">Horario de disponibilidad</label>
+                    
+                            <select name="horarios" id="idHorarios" onchange="sacarSpan()">
+                                <option value="sinHorario">Ninguno</option>
+                                <option value="horario1">De 9 a 12</option>
+                                <option value="horario2">De 12 a 15</option>
+                                <option value="horario3">De 15 a 18</option>
+                                <option value="horario4">De 18 a 21</option>
+                            </select>
+                            
+                            <div>
+                                <input type="submit" value="Enviar">
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </article>
+
+        </div>
+
+
+
+
+        <footer>
+
+            <img src="images/Logo-Roca-Footer.png" alt="Logo">
+
+            <address>
+                San Luis - Av. Julio A. Roca 1234 (CP 5700) |
+                Atención de Lunes a Sábados de <time datetime="8:30">8:30</time> a <time datetime="19:30">19:30</time> hs |
+                Teléfono de recepción: 2664123456
+            </address>
+    
+            <div>
+                <span>Copyright © 2018 - Concesionaria Roca | All Rights Reserved</span>
+                <div><a href="">TÉRMINOS Y CONDICIONES DE USO</a></div>
             </div>
-        </article>
-
+        </footer>
     </main>
 
-    <footer>
-        <address>
-            San Luis - Av. Julio A. Roca 1234 (CP 5700) |
-            Atención de Lunes a Sábados de <time datetime="8:30">8:30</time> a <time datetime="19:30">19:30</time> hs |
-            Teléfono de recepción: 2664123456
-        </address>
 
-        <div>
-            <span>Copyright © 2018 - Concesionaria Roca | All Rights Reserved</span>
-            <div><a href="">TÉRMINOS Y CONDICIONES DE USO</a></div>
-        </div>
-    </footer>
 
 </body>
 </html>
