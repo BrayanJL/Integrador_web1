@@ -206,6 +206,7 @@ tr:nth-child(even) {
 }
 
 #error {
+    text-align: center;
     box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
@@ -222,22 +223,23 @@ tr:nth-child(even) {
     padding-top: 5px;
 }
 
-
-
 #form {
+    position: relative;
+    margin-top: calc(100px + 1%);
+    margin-bottom: 1%;
     box-sizing: border-box;
     text-align: center;
-    justify-content: center;
-    background-color: rgb(244, 203, 137);
-    width: 600px;
-    height: 600px;
+    background-color: rgb(255, 241, 220);
+    width: 1500px;
+    height: 800px;
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 20px;
-    align-items: center;
+    border: 2px solid rgb(244, 203, 137);
+    border-radius: 10px;
     flex-direction: column;
     padding-bottom: 80px;
+    box-shadow: rgb(117, 86, 57) 5px 5px;
 }
 
 
@@ -248,18 +250,32 @@ tr:nth-child(even) {
 
 
 form {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
     font-weight: 200;
     font-size: 30px;
-    width: 100%;
+    width: 50%;
     height: 100%;
-    background-color: aliceblue;
 }
 
 form input {
     height: 40px;
-    width: 500px;
+    width: 99%;
     font-size: 20px;
 }
 
+form select {
+    margin: 20px;
+    height: 40px;
+    width: 100px;
+    font-size: 15px;
+}
+
 #botonform input {
+    width: 100%;
+    margin: auto;
+    border: 0px;
+    color: white;
+    background-color: rgb(235, 155, 70);
 }
