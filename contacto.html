@@ -35,30 +35,32 @@
                     <form class="formulario" id="formulario" onchange="actualizarFormulario()" onsubmit="return validar()">
                         <div>
                             <label for="idApellido">Apellido*</label>
-                            <input id="idApellido" type="text" name="apellido" placeholder = "12 caracteres como máximo">
+                            <input class="ElementoFormulario" id="idApellido" type="text" name="apellido" placeholder = "12 caracteres como máximo">
                         </div>
 
                         <div>
                             <label for="idNombre">Nombre*</label>
-                            <input id="idNombre" type="text" name="nombre" placeholder= "15 caracteres como máximo">
+                            <input class="ElementoFormulario" id="idNombre" type="text" name="nombre" placeholder= "15 caracteres como máximo">
                         </div>
                         <div>
                             <label for="idTelefono">Teléfono*</label>
-                            <input id="idTelefono" type="tel" name="telefono" placeholder= "10 dígitos como máximo">
+                            <input class="ElementoFormulario" id="idTelefono" type="tel" name="telefono" placeholder= "10 dígitos como máximo">
                         </div>
-                        <div id="botonform">
+
+                        <div>
                             <label for="idHorarios">Horario de disponibilidad</label>
-                    
-                            <select name="horarios" id="idHorarios" onchange="sacarSpan()">
+                            <select class="ElementoFormulario" name="horarios" id="idHorarios" onchange="sacarSpan()">
                                 <option value="sinHorario">Ninguno</option>
                                 <option value="horario1">De 9 a 12</option>
                                 <option value="horario2">De 12 a 15</option>
                                 <option value="horario3">De 15 a 18</option>
                                 <option value="horario4">De 18 a 21</option>
                             </select>
-                            
+                        </div>
+
+                        <div id="botonform">    
                             <div>
-                                <input type="submit" value="Enviar">
+                                <input class="ElementoFormulario" id="botonEnviar" type="submit" value="Enviar">
                             </div>
                         </div>
 
@@ -67,8 +69,6 @@
             </article>
 
         </div>
-
-
 
 
         <footer>

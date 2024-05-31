@@ -36,7 +36,6 @@ function validar() {
     if (valido) {
         formulario.style.display = "none";
 
-        nuevoFormulario.removeChild(nuevoFormulario.lastElementChild)
         formulario.insertAdjacentElement("afterend",nuevoFormulario)
         formulario.classList.add("formulario")
 
@@ -55,12 +54,19 @@ function actualizarFormulario() {
     for (const iterator of formulario.childNodes) {
         nuevoFormulario.appendChild(iterator.cloneNode(true));
     }
-    for (const iterator of nuevoFormulario.childNodes) {
+
+    actualizarSelect()
+
+    let ElementosFormulario = nuevoFormulario.getElementsByClassName("ElementoFormulario");
+
+    for (const iterator of ElementosFormulario) {
         iterator.disabled = true;
     }
 
-    actualizarSelect()
+    nuevoFormulario.removeChild(nuevoFormulario.lastElementChild)
+
 }
+
 
 function actualizarSelect() {
     let seleccion = document.getElementById("idHorarios");
