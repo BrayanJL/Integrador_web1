@@ -34,7 +34,7 @@ function validar() {
     }
 
     if (valido) {
-        formulario.style.display = "none";
+        //formulario.style.display = "none";
 
         formulario.insertAdjacentElement("afterend",nuevoFormulario)
         formulario.classList.add("formulario")
@@ -42,6 +42,9 @@ function validar() {
         parrafo.innerHTML = "Datos enviados";
         parrafo.id = 'Validacion';
         formulario.insertAdjacentElement("afterend",parrafo)
+        document.getElementById("form").style.height="1100px";
+
+        scrollNuevoFormulario();
     }
     
     return false;
@@ -165,4 +168,14 @@ function validacionCampo4() {
 
 function sacarSpan() {
     span.remove()
+}
+
+function scrollNuevoFormulario() {
+    var posicion = nuevoFormulario.getBoundingClientRect().top;
+    var offsetNuevoFormulario = posicion + window.scrollY;
+
+    window.scrollTo({
+        top: offsetNuevoFormulario,
+        behavior: "smooth",
+    })
 }
