@@ -48,6 +48,7 @@ function validar() {
         document.getElementById("form").style.height="600px";
         parrafo.remove()
         nuevoFormulario.remove()
+        window.scrollTo(0,0)
     }
     
     return false;
@@ -175,9 +176,7 @@ function sacarSpan() {
 
 function scrollNuevoFormulario() {
     var posicion = nuevoFormulario.getBoundingClientRect().top;
-    var offsetNuevoFormulario = posicion + window.scrollY;
-    var posicion = formulario.lastElementChild.previousElementSibling.getBoundingClientRect().top;
-    var offsetFormulario = posicion + window.scrollY;
+    var offsetFormulario = posicion + window.scrollY - 400;
 
     window.scrollTo({
         top: offsetFormulario,
